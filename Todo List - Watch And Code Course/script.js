@@ -65,13 +65,12 @@ var todoList = {
   }
 };
 
-var displayTodosButton = document.getElementById('displayTodosBtn');
-var toggleAllButton = document.getElementById('toggleAllBtn');
+var handlers  = {
+  displayTodos: function() {
+    todoList.displayTodos();
+  },
 
-displayTodosButton.addEventListener('click', function() {
-  todoList.displayTodos();
-});
-
-toggleAllButton.addEventListener('click', function() {
-  todoList.toggleAll();
-});
+  toggleAll: function() {
+    todoList.toggleAll();
+  }
+};
